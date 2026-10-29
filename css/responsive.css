@@ -1,47 +1,58 @@
 @media screen and (min-width: 200px) and (max-width: 768px) {
-  .faculty-section-layout {
-    padding: 40px 0px!important;
-  }
-  .faculty-section-tag {
-    font-size: 14px!Important;
-    line-height: 20px;
-    margin-bottom: 10px;
-  }
-  .faculty-intro {
-    padding: 35px 20px!important;
-  }
-  .faculty-profile {
-    margin: 10px!important;
-       padding: 35px 20px!important;
-  }
-  .faculty-profile h3 {
-    font-size: 24px;
-    line-height: 30px;
-  }
-  .workshops-layout-section {
-    padding: 40px 0px;
-  }
-  .footer-layouts-contants-tags {
+    .faculty-section-layout {
+        padding: 40px 0px !important;
+    }
+
+    .faculty-section-tag {
+        font-size: 14px !Important;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+
+    .faculty-intro {
+        padding: 35px 20px !important;
+    }
+
+    .faculty-profile {
+        margin: 10px !important;
+        padding: 35px 20px !important;
+    }
+
+    .faculty-profile h3 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .workshops-layout-section {
+        padding: 40px 0px;
+    }
+
+    .footer-layouts-contants-tags {
         font-size: 12px;
-    line-height: 20px;
-    padding-bottom: 5px;
-  }
-  .footer-layouts-contants-subdiscription {
-    width: 100%!important;
-    font-size: 15px;
-  }
-  .footer-layouts-contants-heading  {
-margin-bottom: 0px;
-  }
-  .workshops-layout-img {
-    display: none;
-  }
-  .workshops-event-copy h3 {
+        line-height: 20px;
+        padding-bottom: 5px;
+    }
+
+    .footer-layouts-contants-subdiscription {
+        width: 100% !important;
+        font-size: 15px;
+    }
+
+    .footer-layouts-contants-heading {
+        margin-bottom: 0px;
+    }
+
+    .workshops-layout-img {
+        display: none;
+    }
+
+    .workshops-event-copy h3 {
         font-size: 18px;
         font-weight: 600;
-    line-height: 30px;
-  }
-      .workshops-event-copy {
+        line-height: 30px;
+    }
+
+    .workshops-event-copy {
         right: 20px;
         bottom: 20px;
         left: 20px;
@@ -50,17 +61,21 @@ margin-bottom: 0px;
     .why-choose-layout {
         padding: 40px 0px;
     }
+
     .why-choose-layout-tag {
         text-align: start;
     }
+
     .why-choose-layout-heading {
         font-size: 26px;
         line-height: 36px;
         text-align: start;
     }
+
     .why-choose-photo figcaption {
         font-size: 12px;
     }
+
     .why-choose-card {
         padding: 30px 20px;
         flex-direction: column;
@@ -73,55 +88,225 @@ margin-bottom: 0px;
         padding-top: 80px;
         padding-bottom: 40px;
     }
+
     .faq-card {
         border-radius: 0 18px 18px 18px;
     }
-  
+
     .faq-card-tag {
-            top: -32px;
-    left: 0px;
+        top: -32px;
+        left: 0px;
     }
+
     .faq-heading {
         font-size: 26px;
     }
-    .faq-item{
+
+    .faq-item {
         padding: 12px 0px;
     }
-        .faq-toggle {
+
+    .faq-toggle {
         gap: 5px;
         padding: 0px 0;
         font-size: 14px;
         line-height: 26px;
         text-align: start;
-}
-.faq-icon::before, .faq-icon::after {
-    width: 15px;
+    }
+
+    .faq-icon::before,
+    .faq-icon::after {
+        width: 15px;
+    }
+
+    .faq-answer {
+        padding: 15px 0px;
+        font-size: 15px;
+    }
+
+    .footer-layouts {
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+
+    .footer-layouts-cta-btn {
+        padding: 10px 10px 10px 30px;
+
+    }
+
+    .footer-layouts-contants-subdiscription {
+        font-size: 15px;
+    }
+
+    .footer-copyright-contant {
+        padding-bottom: 10px;
+    }
+
+    .footer-copyright {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        font-size: 12px;
+
+    }
 }
 
-.faq-answer {
-    padding: 15px 0px;
-    font-size: 15px;
-}
- 
-.footer-layouts {
-    padding-top: 40px;
-    padding-bottom: 20px;
-}
-.footer-layouts-cta-btn {
-    padding: 10px 10px 10px 30px;
+/* ---------- Responsive ---------- */
+@media (max-width: 991.98px) {
+    .hero-logo img {
+        height: 52px;
+    }
 
-}
-.footer-layouts-contants-subdiscription {
-    font-size: 15px;
-}
-.footer-copyright-contant {
-    padding-bottom: 10px;
-}
-.footer-copyright {
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    font-size: 12px;
+    .hero-heading,
+    .hero-text {
+        max-width: 100%;
+    }
 
+    .enquiry-card {
+        margin: 0 auto;
+        max-width: 100%;
+    }
 }
+
+@media (max-width: 767.98px) {
+    .learn-card {
+        min-height: 260px;
+    }
+
+    .hero-strip-wrap {
+        padding: 10px !important;
+    }
+
+    .container,
+    .learn-section,
+    .media-section {
+        padding: 50px 16px;
+    }
+
+    .hero {
+        padding: 10px 0 !important;
+    }
+
+    .hero-main {
+        padding: 40px 0;
+    }
+
+    .hero-content-gap {
+        gap: 20px;
+    }
+
+    .journey-gap {
+        gap: 30px;
+    }
+
+    .learn-container {
+        gap: 40px;
+    }
+
+    .hero-heading {
+        font-size: 44px;
+    }
+
+    .Journey-head,
+    .learn-title {
+        font-size: 30px;
+    }
+
+    .learn-card-title,
+    .media-title {
+        font-size: 20px;
+    }
+
+    .learn-cta-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .hero-text,
+    .learn-sub,
+    .learn-card-text,
+    .learn-cta-icon {
+        font-size: 16px;
+    }
+
+    .hero-meta,
+    .hero-btn-outline,
+    .hero-strip-item,
+    .journey-text,
+    .learn-tag,
+    .media-text {
+        font-size: 14px;
+    }
+
+    .hero-strip {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-strip-item {
+        border-left: 0;
+        border-bottom: 2px solid var(--border);
+    }
+
+    .hero-strip-item:last-child {
+        border-bottom: 0;
+    }
+
+    .media-card {
+        height: 180px;
+    }
+
+    .media-content {
+        padding: 18px;
+        max-width: 100%;
+    }
+
+    .media-play {
+        width: 36px;
+        height: 36px;
+        top: 12px;
+        right: 12px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .corner {
+        width: 20px;
+        height: 20px;
+    }
+
+    .corner-tl,
+    .corner-tr {
+        top: 12px;
+    }
+
+    .corner-bl,
+    .corner-br {
+        bottom: 12px;
+    }
+
+    .corner-tl,
+    .corner-bl {
+        left: 12px;
+    }
+
+    .corner-tr,
+    .corner-br {
+        right: 12px;
+    }
+
+    .hero-logo img {
+        height: 44px;
+    }
+
+    .hero-tag {
+        font-size: 10px;
+    }
+
+    .enquiry-card {
+        padding: 20px;
+    }
+
+    .media-play {
+        animation: none !important;
+    }
 }
