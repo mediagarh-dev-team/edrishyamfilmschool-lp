@@ -99,7 +99,7 @@ if (facultySlider) {
       alt: "Vishal Sangwai working with a cinema camera",
     },
     {
-      name: "Shrikant Bhelkar",
+      name: "Shrikanth Bhelkar",
       role: "Faculty, Direction",
       expertise: "Direction",
       experience: "10+ years directing ad films, documentaries and short films",
@@ -167,9 +167,11 @@ if (facultySlider) {
     portrait.alt = slide.alt;
     profileName.textContent = slide.name;
     profileRole.textContent = slide.role;
-    profileDetails[0].textContent = slide.expertise;
-    profileDetails[1].textContent = slide.experience;
-    profileDetails[2].textContent = slide.credits;
+    if (profileDetails.length) {
+      profileDetails[0].textContent = slide.expertise;
+      profileDetails[1].textContent = slide.experience;
+      profileDetails[2].textContent = slide.credits;
+    }
     slideCount.firstChild.textContent = `${String(activeSlide + 1).padStart(2, "0")} `;
   };
 

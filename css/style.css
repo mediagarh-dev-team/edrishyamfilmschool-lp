@@ -1723,7 +1723,7 @@ a {
   margin: 0 0 6px;
   color: #fff;
   font-family: "Sora", sans-serif;
-  font-size: 32px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 600;
   line-height: 42px;
@@ -1734,7 +1734,7 @@ a {
   margin: 0;
   font-family: "DM Sans", sans-serif;
   color: #FB9E33;
-  font-size: 16px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 26px;
@@ -1892,5 +1892,100 @@ a {
 
   .faculty-explore-button {
     transition: none;
+  }
+}
+
+.enquiry-card .form-label {
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 6px;
+}
+
+.enquiry-card .form-control {
+  width: 100%;
+  background: #222;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0;
+  color: #fff;
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  padding: 10px 12px;
+  transition: border-color 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.enquiry-card .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.enquiry-card .form-control:focus {
+  background: #262626;
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px rgba(251, 158, 51, 0.2);
+  color: #fff;
+}
+
+/* stop Chrome's white autofill background */
+.enquiry-card .form-control:-webkit-autofill {
+  -webkit-text-fill-color: #fff;
+  -webkit-box-shadow: 0 0 0 1000px #222 inset;
+  caret-color: #fff;
+}
+
+/* ---------- Submit button ---------- */
+.enquiry-submit {
+  width: 100%;
+  background: var(--orange);
+  color: #000;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  border: 0;
+  padding: 12px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+}
+
+.enquiry-submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(251, 158, 51, 0.35);
+}
+
+.enquiry-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ---------- Message (success / error) ---------- */
+.enquiry-msg {
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  margin-top: 12px;
+  min-height: 18px;
+}
+
+.enquiry-msg.text-success {
+  color: #4ade80 !important;
+}
+
+.enquiry-msg.text-danger {
+  color: #ff6b6b !important;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 991.98px) {
+  .enquiry-card {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .enquiry-card {
+    padding: 20px;
+  }
+
+  .enquiry-title {
+    font-size: 1.1rem;
   }
 }

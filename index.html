@@ -69,14 +69,33 @@
 
           <div class="col-md-6 col-12 align-items-center justify-content-end d-flex" id="enquiryForm">
             <div class="enquiry-card" data-aos="fade-up" data-aos-delay="300">
-              <div class="d-flex flex-column gap-2 mb-4">
+              <div class="d-flex flex-column gap-2">
                 <div class="enquiry-label fw-medium font-dm-sans">Enquire now</div>
                 <h2 class="enquiry-title font-sora fw-semibold">Request a call back</h2>
                 <p class="enquiry-sub font-dm-sans">Share your details and our team will get in touch.</p>
               </div>
 
-              <form id="enquiryForm" novalidate>
+              <form id="enquiryForm" class="w-100" novalidate>
+                <div class="mb-3">
+                  <label for="leadName" class="form-label">Name</label>
+                  <input type="text" id="leadName" name="name" class="form-control w-100" placeholder="Your full name"
+                    required />
+                </div>
+                <div class="mb-3">
+                  <label for="leadPhone" class="form-label">Number</label>
+                  <input type="tel" id="leadPhone" name="phone" class="form-control w-100" placeholder="+91 00000 00000"
+                    required />
+                </div>
+                <div class="mb-4">
+                  <label for="leadEmail" class="form-label">Email</label>
+                  <input type="email" id="leadEmail" name="email" class="form-control w-100"
+                    placeholder="you@example.com" required />
+                </div>
+
+                <button type="submit" class="enquiry-submit" id="leadSubmit">Submit enquiry</button>
+                <div id="leadMsg" class="enquiry-msg" role="status" aria-live="polite"></div>
               </form>
+
             </div>
           </div>
         </div>
@@ -322,7 +341,6 @@
       </div>
     </div>
   </section>
-
   <section>
     <div class="faculty-section-layout">
       <div class="container">
@@ -344,12 +362,12 @@
                 <img src="image/Figure%20(3).webp" alt="Tejas Nerurkar, faculty member for photography">
                 <span class="faculty-slide-count" aria-live="polite">01 <span>/ 12</span></span>
               </div>
-              <article class="faculty-profile" id="faculty-profile" aria-live="polite">
+              <article class="faculty-profile d-flex flex-column gap-3" id="faculty-profile" aria-live="polite">
                 <div>
                   <h3>Tejas Nerurkar</h3>
                   <p class="faculty-role">Faculty, Photography</p>
                 </div>
-                <div class="faculty-profile-divider"></div>
+                <!-- <div class="faculty-profile-divider"></div>
                 <div class="faculty-detail">
                   <h4>Area of Expertise</h4>
                   <p>Photography</p>
@@ -361,7 +379,7 @@
                 <div class="faculty-detail">
                   <h4>Verified Film or Media Credits</h4>
                   <p>Photographer for brand campaigns and photo exhibitions</p>
-                </div>
+                </div> -->
                 <div class="faculty-controls" aria-label="Faculty profile navigation">
                   <button type="button" aria-label="Previous faculty profile">
                     <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
@@ -731,7 +749,85 @@
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="javascript/javascript.js"></script>
   <script src="javascript/javascript1.js"></script>
+  <script>
+    const CRM_URL = "https://crm.mediagarh.com/CRM/api/leads/create";
+    const CRM_KEY = "b62d20f5cd5e82d3ee1cfe7fc85cccbbe43db37e36830923557c912602afe023";      // better: use the proxy below instead
+    const FORM_ID = 64;
 
+    const leadForm = document.getElementById("enquiryForm");
+    const leadBtn = document.getElementById("leadSubmit");
+    const leadMsg = document.getElementById("leadMsg");
+
+    function showMsg(text, ok) {
+      leadMsg.textContent = text;
+      leadMsg.className = "mt-3 small " + (ok ? "text-success" : "text-danger");
+    }
+
+    leadForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const fullName = document.getElementById("leadName").value.trim();
+      const phone = document.getElementById("leadPhone").value.replace(/[\s-]/g, "");
+      const email = document.getElementById("leadEmail").value.trim();
+
+      // validation
+      if (fullName.length < 2) return showMsg("Please enter your name.", false);
+      if (!/^(\+91)?[6-9]\d{9}$/.test(phone)) return showMsg("Please enter a valid 10-digit mobile number.", false);
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return showMsg("Please enter a valid email address.", false);
+
+      // split the name into first and last
+      const parts = fullName.split(/\s+/);
+      const firstName = parts[0];
+      const lastName = parts.slice(1).join(" ");
+
+      // UTM + page info
+      const params = new URLSearchParams(window.location.search);
+
+      const payload = {
+        form_id: FORM_ID,
+        first_name: firstName,
+        last_name: lastName,
+        email: email,
+        phone: phone,
+        utm_source: params.get("utm_source") || "",
+        utm_medium: params.get("utm_medium") || "",
+        utm_campaign: params.get("utm_campaign") || "",
+        landing_url: window.location.href,
+        referrer_url: document.referrer || "",
+        custom_fields: {
+          field_field_1793275567798_kgebm: { label: "Name", type: "text", value: fullName, map_to: "first_name" },
+          field_field_1793275568265_o9ife: { label: "Email Address", type: "email", value: email, map_to: "email" },
+          field_field_1793275568598_kdhil: { label: "Phone Number", type: "phone", value: phone, map_to: "phone_number" },
+        },
+      };
+
+      leadBtn.disabled = true;
+      leadBtn.textContent = "Submitting...";
+      showMsg("", true);
+
+      try {
+        const res = await fetch(CRM_URL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "X-Api-Key": CRM_KEY,
+          },
+          body: JSON.stringify(payload),
+        });
+
+        if (!res.ok) throw new Error("Request failed: " + res.status);
+
+        window.location.href = "/thankyou.html";
+        leadForm.reset();
+      } catch (err) {
+        console.error(err);
+        showMsg("Something went wrong. Please try again.", false);
+      } finally {
+        leadBtn.disabled = false;
+        leadBtn.textContent = "Submit enquiry";
+      }
+    });
+  </script>
 </body>
 
 </html>
