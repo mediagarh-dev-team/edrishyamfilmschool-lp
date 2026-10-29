@@ -1126,7 +1126,15 @@ line-height: 28px;
   }
 
   .faculty-portrait {
-    min-height: 420px;
+    min-height: 0;
+  }
+
+  .faculty-portrait img {
+    position: relative;
+    inset: auto;
+    display: block;
+    height: auto;
+    object-fit: contain;
   }
 
   .faculty-slide-count {

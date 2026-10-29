@@ -124,4 +124,15 @@ margin-bottom: 0px;
     font-size: 12px;
 
 }
+  .faculty-portrait {
+    min-height: 0;
+  }
+
+  .faculty-portrait img {
+    position: relative;
+    inset: auto;
+    display: block;
+    height: auto;
+    object-fit: contain;
+  }
 }
