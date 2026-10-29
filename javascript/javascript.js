@@ -17,7 +17,7 @@ const facultySlider = document.querySelector(".faculty-section-card");
 
 if (facultySlider) {
   const facultySlides = [
-        {
+    {
       name: "Vishal Sangwai",
       role: "Head of Cinematography",
       expertise: "Direction, Cinematography",
@@ -26,7 +26,7 @@ if (facultySlider) {
       image: "image/Figure-4 (1).webp",
       alt: "figure",
     },
-            {
+    {
       name: "Sunil Saigal",
       role: "Head of Cinematography",
       expertise: "Direction, Cinematography",
@@ -35,7 +35,7 @@ if (facultySlider) {
       image: "image/Figure-4 (2).webp",
       alt: "Vishal Sangwai working with a cinema camera",
     },
-            {
+    {
       name: "Shrikant Sir",
       role: "Head of Cinematography",
       expertise: "Direction, Cinematography",
@@ -44,7 +44,7 @@ if (facultySlider) {
       image: "image/Figure-4 (3).webp",
       alt: "Vishal Sangwai working with a cinema camera",
     },
-   {
+    {
       name: "Rohit Sir",
       role: "Head of Cinematography",
       expertise: "Direction, Cinematography",
@@ -53,7 +53,7 @@ if (facultySlider) {
       image: "image/Figure-4 (4).webp",
       alt: "Vishal Sangwai working with a cinema camera",
     },
-       {
+    {
       name: "Mangesh Sawant",
       role: "Head of Cinematography",
       expertise: "Direction, Cinematography",
@@ -62,7 +62,7 @@ if (facultySlider) {
       image: "image/Figure-4 (5).webp",
       alt: "Vishal Sangwai working with a cinema camera",
     },
-     {
+    {
       name: "Madhav Chirmuley",
       role: "Head of Cinematography",
       expertise: "Direction, Cinematography",
@@ -71,7 +71,7 @@ if (facultySlider) {
       image: "image/Figure-4 (6).webp",
       alt: "Vishal Sangwai working with a cinema camera",
     },
-     {
+    {
       name: "Durgesh Sir",
       role: "Head of Cinematography",
       expertise: "Direction, Cinematography",
@@ -80,7 +80,7 @@ if (facultySlider) {
       image: "image/Figure-4 (7).webp",
       alt: "Vishal Sangwai working with a cinema camera",
     },
-         {
+    {
       name: "Dilip Yande",
       role: "Head of Cinematography",
       expertise: "Direction, Cinematography",
@@ -89,7 +89,7 @@ if (facultySlider) {
       image: "image/Figure-4 (8).webp",
       alt: "Vishal Sangwai working with a cinema camera",
     },
-         {
+    {
       name: "Sanjay Jadhav",
       role: "Faculty, Cinematography",
       expertise: "Cinematography",
@@ -98,8 +98,8 @@ if (facultySlider) {
       image: "image/Image (placment) (4).webp",
       alt: "Vishal Sangwai working with a cinema camera",
     },
-         {
-      name: "Shrikant Bhelkar",
+    {
+      name: "Shrikanth Bhelkar",
       role: "Faculty, Direction",
       expertise: "Direction",
       experience: "10+ years directing ad films, documentaries and short films",
@@ -107,7 +107,7 @@ if (facultySlider) {
       image: "image/Image (placment) (1).webp",
       alt: "Vishal Sangwai working with a cinema camera",
     },
-         {
+    {
       name: "Tejas Nerurkar",
       role: "Faculty, Photography",
       expertise: "Photography",
@@ -167,9 +167,11 @@ if (facultySlider) {
     portrait.alt = slide.alt;
     profileName.textContent = slide.name;
     profileRole.textContent = slide.role;
-    profileDetails[0].textContent = slide.expertise;
-    profileDetails[1].textContent = slide.experience;
-    profileDetails[2].textContent = slide.credits;
+    if (profileDetails.length) {
+      profileDetails[0].textContent = slide.expertise;
+      profileDetails[1].textContent = slide.experience;
+      profileDetails[2].textContent = slide.credits;
+    }
     slideCount.firstChild.textContent = `${String(activeSlide + 1).padStart(2, "0")} `;
   };
 
