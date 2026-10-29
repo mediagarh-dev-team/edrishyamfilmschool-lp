@@ -5,69 +5,376 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>E-Drishyam</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="./image/logo.png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" />
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Sora:wght@100..800&display=swap"
     rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/responsive.css" />
 
 </head>
 
 <body>
+  <div class="w-100 top-img">
+    <img src="./image/Sprocket_band_bottom.webp" class="d-block w-100 object-fit-cover" alt="e-Drishyam top banner" />
+  </div>
+  <section class="hero position-relative d-flex flex-column overflow-hidden" id="home">
+    <div class="container position-relative">
+      <!-- four corner L brackets (zoom-in) -->
+      <span class="corner corner-tl" data-aos="zoom-in" data-aos-duration="900"></span>
+      <span class="corner corner-tr" data-aos="zoom-in" data-aos-duration="900" data-aos-delay="100"></span>
+      <span class="corner corner-bl" data-aos="zoom-in" data-aos-duration="900" data-aos-delay="200"></span>
+      <span class="corner corner-br" data-aos="zoom-in" data-aos-duration="900" data-aos-delay="300"></span>
+      <!-- top bar with logo image -->
+      <header class="position-relative hero-topbar" data-aos="fade-down">
+        <a href="#home" class="hero-logo mx-auto mx-md-0">
+          <img src="./image/e-driyam-logo.webp" class="object-fit-cover" alt="e-Drishyam Film School" />
+        </a>
+      </header>
 
+      <div class=" hero-main">
+        <div class="row align-items-center g-4 g-md-5">
+          <div class="col-md-6 col-12">
+            <div class="d-flex flex-column hero-content-gap">
+              <div class="hero-tag space-mono-font text-uppercase fw-bold w-fit-content" data-aos="fade-up">
+                <i class="fa-solid fa-circle hero-tag-dot"></i>Learn filmmaking. Create for the screen.
+              </div>
+
+              <div class="d-flex flex-column gap-3">
+                <h1 class="hero-heading font-sora text-white" data-aos="fade-up" data-aos-delay="100">
+                  <span class="accent">Diploma</span> in Advanced Filmmaking
+                </h1>
+                <div class="hero-meta font-sora text-uppercase fw-bold" data-aos="fade-up" data-aos-delay="200">
+                  1-Year Full-Time Programme | Thane
+                </div>
+              </div>
+
+              <p class="hero-text font-inter" data-aos="fade-up" data-aos-delay="300">
+                Learn scriptwriting, cinematography, direction and editing through practical filmmaking training.
+              </p>
+
+              <a href="#enquiryForm" class="hero-btn-outline font-dm-sans w-fit-content text-decoration-none"
+                data-aos="fade-up" data-aos-delay="400">
+                Explore programmes <i class="fa-solid fa-arrow-down ms-3"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-12 align-items-center justify-content-end d-flex" id="enquiryForm">
+            <div class="enquiry-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="d-flex flex-column gap-2 mb-4">
+                <div class="enquiry-label fw-medium font-dm-sans">Enquire now</div>
+                <h2 class="enquiry-title font-sora fw-semibold">Request a call back</h2>
+                <p class="enquiry-sub font-dm-sans">Share your details and our team will get in touch.</p>
+              </div>
+
+              <form id="enquiryForm" novalidate>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- bottom info strip -->
+    <div class="container hero-strip-wrap">
+      <div class="hero-strip" data-aos="fade-up" data-aos-delay="500">
+        <div class="hero-strip-item font-sora fw-bold">Practical filmmaking learning</div>
+        <div class="hero-strip-item font-sora fw-bold">Hands-on learning at our on-campus studio</div>
+        <div class="hero-strip-item font-sora fw-bold">
+          State Board of Maharashtra<br />
+          <small class="short-text">confirm the exact affiliation for the diploma before publishing</small>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container journey-container d-flex flex-column">
+      <div class="row journey-gap align-items-center justify-content-center">
+        <div class="col-12 d-flex align-items-center justify-content-center" data-aos="fade-up">
+          <h2 class="text-center font-sora fw-semibold Journey-head">Your FilmMaking Journey
+            Starts With Learning <span class="text-D97A12">The Craft.</span></h2>
+        </div>
+        <!-- image -->
+        <div class="col-md-5" data-aos="fade-right" data-aos-delay="100">
+          <img src="./image/Why_mica_image.webp" alt="Film set with crew"
+            class="journey-img d-block w-100 object-fit-cover" />
+        </div>
+
+        <!-- content -->
+        <div class="col-md-6 font-dm-sans">
+          <p class="journey-text" data-aos="fade-up" data-aos-delay="150">
+            A film is more than what appears on screen.<br />
+            It takes a story, a vision, technical skills and a team to bring it to life.
+          </p>
+
+          <p class="journey-text" data-aos="fade-up" data-aos-delay="250">
+            The Diploma in Advanced Filmmaking at e-Drishyam introduces you to the creative and technical processes
+            behind filmmaking. Explore how ideas develop into stories, how visuals are captured and how footage comes
+            together to create a film.
+          </p>
+
+          <a href="#enquiryForm" class="journey-link text-D97A12 text-decoration-none align-items-center fw-medium"
+            data-aos="fade-up" data-aos-delay="350">
+            Know more <i class="fa-solid fa-arrow-right ms-2"></i>
+          </a>
+
+          <hr class="journey-divider" data-aos="fade-left" data-aos-delay="400" />
+
+          <div class="d-flex flex-wrap gap-2 font-dm-sans" data-aos="fade-up" data-aos-delay="450">
+            <span class="journey-tag">Filmmaking</span>
+            <span class="journey-tag">e-Drishyam</span>
+          </div>
+        </div>
+      </div>
+  </section>
+  <section class="container-fluid learn-bg overflow-hidden">
+    <div class="container learn-section d-flex flex-column learn-container">
+      <div class="text-center d-flex flex-column gap-2 gap-md-3">
+        <div
+          class="learn-tag d-flex gap-2 align-items-center justify-content-center text-center text-uppercase font-dm-sans"
+          data-aos="fade-up">
+          <img src="./image/camera-icon.webp" />What will you learn?
+        </div>
+        <h2 class="font-sora fw-semibold learn-title text-center text-white" data-aos="fade-up" data-aos-delay="100">
+          From the first idea to<br />the final frame.
+        </h2>
+        <p class="learn-sub" data-aos="fade-up" data-aos-delay="200">
+          Explore the creative and technical disciplines that come together to make a film.
+        </p>
+      </div>
+
+      <!-- slider -->
+      <div class="d-flex flex-column gap-3 gap-md-4">
+        <div class="learn-slider w-100" id="learnSlider" data-aos="fade-up" data-aos-delay="250">
+          <div class="learn-viewport">
+            <div class="learn-track" id="learnTrack">
+
+              <article class="learn-card">
+                <div class="learn-icon bg-blue mb-3 mb-4">
+                  <img src="./image/icon.svg" height="30" width="30" class="flex-shrink-0" />
+                </div>
+                <h3 class="learn-card-title text-white font-sora fw-bold">Scriptwriting &amp; Storytelling</h3>
+                <p class="learn-card-text font-dm-sans">Learn how to develop ideas, build narratives, create characters
+                  and write
+                  stories for the screen.</p>
+                <!-- replace this icon with <img class="learn-art" src="images/..."> if you have artwork -->
+                <img class="learn-art" src="./image/fileContainer.webp" />
+              </article>
+
+              <article class="learn-card">
+                <div class="learn-icon bg-purple mb-3 mb-4"> <img src="./image/icon (1).svg" height="30" width="30"
+                    class="flex-shrink-0" /></div>
+                <h3 class="learn-card-title text-white font-sora fw-bold">Cinematography</h3>
+                <p class="learn-card-text font-dm-sans">Understand camera techniques, framing, composition, lenses,
+                  lighting and
+                  visual
+                  storytelling.</p>
+                <img class="learn-art" src="./image/userContainer.webp" />
+              </article>
+
+              <article class="learn-card">
+                <div class="learn-icon bg-orange mb-3 mb-4"> <img src="./image/icon (2).svg" height="30" width="30"
+                    class="flex-shrink-0" /></div>
+                <h3 class="learn-card-title text-white font-sora fw-bold">Film Direction</h3>
+                <p class="learn-card-text font-dm-sans">Explore the role of a director, scene planning, visualisation
+                  and the process
+                  of bringing a story to life.</p>
+                <img class="learn-art" src="./image/MovieContainer.webp" />
+              </article>
+
+              <article class="learn-card">
+                <div class="learn-icon bg-blue mb-3 mb-4"><img src="./image/icon (3).svg" height="30" width="30"
+                    class="flex-shrink-0" /></div>
+                <h3 class="learn-card-title text-white font-sora fw-bold">Editing &amp; Post-Production</h3>
+                <p class="learn-card-text font-dm-sans">Learn how to shape footage into a cohesive story through editing
+                  and
+                  post-production techniques.</p>
+                <img class="learn-art" src="./image/fileContainer.webp" />
+              </article>
+
+              <!-- placeholder cards: edit the text -->
+              <article class="learn-card">
+                <div class="learn-icon bg-purple mb-3 mb-4"><img src="./image/icon (4).svg" height="30" width="30"
+                    class="flex-shrink-0" /></div>
+                <h3 class="learn-card-title text-white font-sora fw-bold">Sound Design &amp; Music</h3>
+                <p class="learn-card-text font-dm-sans">Discover how sound, dialogue and music shape mood and
+                  storytelling on screen.
+                </p>
+                <img class="learn-art" src="./image/waveform.webp" />
+              </article>
+
+              <article class="learn-card">
+                <div class="learn-icon bg-orange mb-3 mb-4"><img src="./image/icon (5).svg" height="30" width="30"
+                    class="flex-shrink-0" /></div>
+                <h3 class="learn-card-title text-white font-sora fw-bold">Filmmaking Practice</h3>
+                <p class="learn-card-text font-dm-sans">Plan shoots, work with a crew and apply your learning on
+                  hands-on film
+                  projects.</p>
+                <img class="learn-art" src="./image/MovieContainer.webp" />
+              </article>
+
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-end align-items-center learn-controls" data-aos="fade-up">
+
+          <div class="d-flex gap-2">
+            <button type="button" class="learn-arrow" id="learnPrev" aria-label="Previous">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button type="button" class="learn-arrow learn-arrow-next" id="learnNext" aria-label="Next">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- CTA -->
+      <div class="text-center learn-cta-wrap" data-aos="zoom-in" data-aos-delay="100">
+        <a href="#enquiryForm" class="learn-cta font-dm-sans">
+          Get the complete course details
+          <span class="learn-cta-icon"><i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="media-section pt-0 overflow-hidden">
+    <div class="container-fluid p-0">
+      <div class="row g-0 mb-4 mb-md-5">
+
+        <!-- card 1 -->
+        <div class="col-md-6" data-aos="fade-right">
+          <article class="media-card">
+            <img src="./image/advertisement.webp" alt="Music Videos" class="media-img" />
+            <video class="media-video" muted loop playsinline preload="metadata">
+              <source src="./image/video/29_OCT_e-Drishyam.webm" type="video/mp4" />
+            </video>
+            <span class="media-play"><i class="fa-solid fa-play"></i></span>
+            <div class="media-content">
+              <h3 class="media-title fw-semibold font-sora">Documentary Films</h3>
+              <p class="media-text font-dm-sans">Understand how to research, capture and present real-life stories.</p>
+            </div>
+          </article>
+        </div>
+
+        <!-- card 2 -->
+        <div class="col-md-6" data-aos="fade-left">
+          <article class="media-card">
+            <img src="./image/music-video.webp" alt="Music Videos" class="media-img" />
+            <video class="media-video" muted loop playsinline preload="metadata">
+              <source src="./image/video/29_OCT_e-Drishyam_03.webm" type="video/mp4" />
+            </video>
+            <span class="media-play"><i class="fa-solid fa-play"></i></span>
+            <div class="media-content">
+              <h3 class="media-title fw-semibold font-sora">Music Videos</h3>
+              <p class="media-text font-dm-sans">Explore the relationship between visuals, music, rhythm and creative
+                direction.</p>
+            </div>
+          </article>
+        </div>
+
+        <!-- card 3 -->
+        <div class="col-md-6" data-aos="fade-right" data-aos-delay="100">
+          <article class="media-card">
+            <img src="./image/short-firm.webp" alt="Short Films" class="media-img" />
+            <video class="media-video" muted loop playsinline preload="metadata">
+              <source src="./image/video/weetajoyousquese.webm" type="video/mp4" />
+            </video>
+            <span class="media-play"><i class="fa-solid fa-play"></i></span>
+            <div class="media-content">
+              <h3 class="media-title fw-semibold font-sora">Short Films</h3>
+              <p class="media-text font-dm-sans">Experience the process of developing and presenting a story in a
+                short-film format.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <!-- card 4 -->
+        <div class="col-md-6" data-aos="fade-left" data-aos-delay="100">
+          <article class="media-card">
+            <img src="./image/Documentary.webp" alt="Tabletop Photography" class="media-img" />
+            <video class="media-video" muted loop playsinline preload="metadata">
+              <source src="./image/video/Gulzar_e-Drishyam.webm" type="video/mp4" />
+            </video>
+            <span class="media-play"><i class="fa-solid fa-play"></i></span>
+            <div class="media-content">
+              <h3 class="media-title fw-semibold font-sora">Tabletop Photography</h3>
+              <p class="media-text font-dm-sans">Explore product presentation, composition, lighting and controlled
+                photography
+                setups.</p>
+            </div>
+          </article>
+        </div>
+
+      </div>
+      <div class="text-center learn-cta-wrap" data-aos="zoom-in" data-aos-delay="100">
+        <a href="#enquiryForm" class="learn-cta font-dm-sans">
+          Discuss the programme with us
+          <span class="learn-cta-icon"><i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
 
   <section>
     <div class="faculty-section-layout">
       <div class="container">
         <div class="row d-flex justify-content-center">
-        <div class="col-12">
-          <div class="faculty-section-card">
-            <div class="faculty-intro">
-              <div class="faculty-section-tag">FACULTY & MENTORSHIP</div>
-              <h2><span>Learn from people</span><br>who understand the craft.</h2>
-              <p class="faculty-intro-lead">Learning filmmaking involves understanding both creative vision and technical execution.</p>
-              <p class="faculty-intro-copy">Get guidance from faculty and creative professionals as you explore different aspects of filmmaking.</p>
-              <a class="faculty-explore-button" href="#enquiryForm">
-                Explore our faculty <span aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
-              </a>
+          <div class="col-12">
+            <div class="faculty-section-card">
+              <div class="faculty-intro">
+                <div class="faculty-section-tag">FACULTY & MENTORSHIP</div>
+                <h2><span>Learn from people</span><br>who understand the craft.</h2>
+                <p class="faculty-intro-lead">Learning filmmaking involves understanding both creative vision and
+                  technical execution.</p>
+                <p class="faculty-intro-copy">Get guidance from faculty and creative professionals as you explore
+                  different aspects of filmmaking.</p>
+                <a class="faculty-explore-button" href="#enquiryForm">
+                  Explore our faculty <span aria-hidden="true"><i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+              </div>
+              <div class="faculty-portrait">
+                <img src="image/Figure%20(3).webp" alt="Tejas Nerurkar, faculty member for photography">
+                <span class="faculty-slide-count" aria-live="polite">01 <span>/ 12</span></span>
+              </div>
+              <article class="faculty-profile" id="faculty-profile" aria-live="polite">
+                <div>
+                  <h3>Tejas Nerurkar</h3>
+                  <p class="faculty-role">Faculty, Photography</p>
+                </div>
+                <div class="faculty-profile-divider"></div>
+                <div class="faculty-detail">
+                  <h4>Area of Expertise</h4>
+                  <p>Photography</p>
+                </div>
+                <div class="faculty-detail">
+                  <h4>Relevant Professional Experience</h4>
+                  <p>10 years in commercial portrait and product photography</p>
+                </div>
+                <div class="faculty-detail">
+                  <h4>Verified Film or Media Credits</h4>
+                  <p>Photographer for brand campaigns and photo exhibitions</p>
+                </div>
+                <div class="faculty-controls" aria-label="Faculty profile navigation">
+                  <button type="button" aria-label="Previous faculty profile">
+                    <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                  </button>
+                  <button type="button" aria-label="Next faculty profile">
+                    <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </article>
             </div>
-            <div class="faculty-portrait">
-              <img src="image/Figure%20(3).webp" alt="Tejas Nerurkar, faculty member for photography">
-              <span class="faculty-slide-count" aria-live="polite">01 <span>/ 12</span></span>
-            </div>
-            <article class="faculty-profile" id="faculty-profile" aria-live="polite">
-              <div>
-                <h3>Tejas Nerurkar</h3>
-                <p class="faculty-role">Faculty, Photography</p>
-              </div>
-              <div class="faculty-profile-divider"></div>
-              <div class="faculty-detail">
-                <h4>Area of Expertise</h4>
-                <p>Photography</p>
-              </div>
-              <div class="faculty-detail">
-                <h4>Relevant Professional Experience</h4>
-                <p>10 years in commercial portrait and product photography</p>
-              </div>
-              <div class="faculty-detail">
-                <h4>Verified Film or Media Credits</h4>
-                <p>Photographer for brand campaigns and photo exhibitions</p>
-              </div>
-              <div class="faculty-controls" aria-label="Faculty profile navigation">
-                <button type="button" aria-label="Previous faculty profile">
-                  <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
-                </button>
-                <button type="button" aria-label="Next faculty profile">
-                  <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-                </button>
-              </div>
-            </article>
           </div>
         </div>
       </div>
-    </div>
 
   </section>
 
@@ -75,19 +382,21 @@
     <div class="workshops-layout-section">
       <div class="container">
         <div class="row pb-lg-5 pb-3">
-         <div class="col-md-8">
-          <div class="workshops-layout-contant">
-              <div class="footer-layouts-contants-tags">Workshops, Events & Industry Exposure <img src="image/Image.svg" alt="" class="img-fluid" /> </div>
+          <div class="col-md-8">
+            <div class="workshops-layout-contant">
+              <div class="footer-layouts-contants-tags">Workshops, Events & Industry Exposure <img src="image/Image.svg"
+                  alt="" class="img-fluid" /> </div>
               <h2 class="footer-layouts-contants-heading ">
                 Learning that goes <span style="color: #FB9E33;"> beyond the classroom.</span></h2>
-                  <div class="footer-layouts-contants-subdiscription w-75 ">Explore filmmaking beyond regular classroom sessions through workshops, guest interactions, screenings and creative activities.</div>
+              <div class="footer-layouts-contants-subdiscription w-75 ">Explore filmmaking beyond regular classroom
+                sessions through workshops, guest interactions, screenings and creative activities.</div>
+            </div>
           </div>
-         </div>
-         <div class="col-md-4">
-       <div class="workshops-layout-img">
-        <img src="image/Image (About).svg" class="text-center" alt="" srcset="">
-       </div>
-         </div>
+          <div class="col-md-4">
+            <div class="workshops-layout-img">
+              <img src="image/Image (About).svg" class="text-center" alt="" srcset="">
+            </div>
+          </div>
         </div>
       </div>
       <div class="slider-layout-wokshops">
@@ -106,7 +415,7 @@
                 <div class="workshops-event-copy">
                   <h3>Acting & Expression</h3>
                   <p>Explore acting classes and expression photography that capture performance,
-                     emotion and creativity.</p>
+                    emotion and creativity.</p>
                 </div>
               </article>
               <article class="workshops-event-card">
@@ -116,18 +425,20 @@
                   <p>Discover student work and creative projects developed as part of their learning journey.</p>
                 </div>
               </article>
-                   <article class="workshops-event-card">
+              <article class="workshops-event-card">
                 <img src="image/Card 4.webp" alt="" class="workshops-event-image">
                 <div class="workshops-event-copy">
                   <h3>Industry Exposure & Visits</h3>
-                  <p>See glimpses of student visits, school and college visits, and tours that offer exposure to creative learning environments.</p>
+                  <p>See glimpses of student visits, school and college visits, and tours that offer exposure to
+                    creative learning environments.</p>
                 </div>
               </article>
               <article class="workshops-event-card">
                 <img src="image/Card 5.webp" alt="" class="workshops-event-image">
                 <div class="workshops-event-copy">
                   <h3>Events, Screenings & Special Moments</h3>
-                  <p>Explore events, Matinee activities, podcasts, and award-related moments from the e-Drishyam community.</p>
+                  <p>Explore events, Matinee activities, podcasts, and award-related moments from the e-Drishyam
+                    community.</p>
                 </div>
               </article>
             </div>
@@ -143,7 +454,8 @@
                 <img src="image/Card 2 (1).webp" alt="" class="workshops-event-image">
                 <div class="workshops-event-copy">
                   <h3>Acting & Expression</h3>
-                  <p>Explore acting classes and expression photography that capture performance, emotion and creativity.</p>
+                  <p>Explore acting classes and expression photography that capture performance, emotion and creativity.
+                  </p>
                 </div>
               </article>
               <article class="workshops-event-card">
@@ -157,14 +469,16 @@
                 <img src="image/Card 4 (1).webp" alt="" class="workshops-event-image">
                 <div class="workshops-event-copy">
                   <h3>Industry Exposure & Visits</h3>
-                  <p>See glimpses of student visits, school and college visits, and tours that offer exposure to creative learning environments.</p>
+                  <p>See glimpses of student visits, school and college visits, and tours that offer exposure to
+                    creative learning environments.</p>
                 </div>
               </article>
               <article class="workshops-event-card">
                 <img src="image/why-choose.webp" alt="" class="workshops-event-image">
                 <div class="workshops-event-copy">
                   <h3>Events, Screenings & Special Moments</h3>
-                  <p>Explore events, Matinee activities, podcasts, and award-related moments from the e-Drishyam community.</p>
+                  <p>Explore events, Matinee activities, podcasts, and award-related moments from the e-Drishyam
+                    community.</p>
                 </div>
               </article>
             </div>
@@ -208,14 +522,15 @@
           </div>
           <figure class="why-choose-photo col-12 col-lg-4 order-first order-lg-0">
             <img class="why-choose-photo-image" src="image/why-choose.webp" alt="" aria-hidden="true">
-            <figcaption><i class="fa-solid fa-circle me-2"></i>  Life at e-Drishyam, Thane</figcaption>
+            <figcaption><i class="fa-solid fa-circle me-2"></i> Life at e-Drishyam, Thane</figcaption>
           </figure>
           <div class="why-choose-card-column col-12 col-md-6 col-lg-4 d-flex flex-column gap-3">
             <article class="why-choose-card">
               <span class="why-choose-icon" aria-hidden="true"><img src="image/ic-book.svg" alt=""></span>
               <div>
                 <h3>Multiple Forms of Storytelling</h3>
-                <p>Explore documentary films, music videos, advertisement films, short films and photography assignments.</p>
+                <p>Explore documentary films, music videos, advertisement films, short films and photography
+                  assignments.</p>
               </div>
             </article>
             <article class="why-choose-card">
@@ -412,9 +727,11 @@
       </div>
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="javascript/javascript.js"></script>
+  <script src="javascript/javascript1.js"></script>
 
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-<script src="javascript/javascript.js"></script>
 
 </html>
